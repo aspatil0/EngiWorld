@@ -1,16 +1,14 @@
-import { useState } from 'react'
-
-import viteLogo from './assets/vite.svg'
 import SelectionPage from './Pages/SelectionPage'
-import './App.css'
+import Navbar from './Components/Navbar'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <SelectionPage />
-    </>
+    <div className="min-h-screen bg-bg">
+
+      <div className="pt-32 pb-10 px-7 flex items-start justify-center min-h-screen">
+        <SelectionPage />
+      </div>
+    </div>
   )
 }
 
