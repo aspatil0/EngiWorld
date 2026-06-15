@@ -69,8 +69,62 @@ body {
   width: 60px;
   height: auto;
 } */ 
+.header {
+  position: fixed;
+  top: 15px;
+  left: 20px;
+  right: 20px;
+
+  height: 75px;
+
+  background: white;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+
+  padding: 0 35px;
+
+  border-radius: 20px;
+
+  box-shadow: 0 8px 25px rgba(37, 99, 235, 0.12);
+
+  z-index: 1000;
+}
+
+.header-title {
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* Logo */
+.logo {
+  width: 65px;
+  height: 65px;
+  object-fit: contain;
+
+  position: absolute;
+  right: 25px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  transition: 0.3s;
+}
+
+.logo:hover {
+  transform: scale(1.08);
+}
 
 .header {
+  background: rgba(37, 99, 235, 0.95);
+  backdrop-filter: blur(10px);
+}
+
+/* .header {
   position: fixed;
   top: 0;
   left: 0;
@@ -97,7 +151,8 @@ body {
   right: 40px;
   width: 100px;
   height: auto;
-} 
+}  */
+
 /* MAIN CONTAINER */
 
 .login-container {

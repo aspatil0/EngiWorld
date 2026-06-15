@@ -1,19 +1,22 @@
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Login.css";
 import logo from "../../assets/EWlogo.png";
 
 function Login() {
-  return (
-    <div className="login-container">
-        <div className="header">
-            <h1 className="header-title">EngiWorld</h1>
+    const navigate = useNavigate();
 
-            <img
-                src={logo}
-                alt="EngiWorld Logo"
-                className="logo"
-            />
-        </div>
+    return (
+        <div className="login-container">
+            <div className="header">
+                <h1 className="header-title">EngiWorld</h1>
+
+                <img
+                    src={logo}
+                    alt="EngiWorld Logo"
+                    className="logo"
+                />
+            </div>
 
        
         
@@ -39,12 +42,16 @@ function Login() {
                     </div>
 
                     <div className="forgot-password">
-                        <Link to="/forgot-password">
+                        <Link to="/forgotpass">
                             Forgot Password?
                         </Link>
                     </div>
 
-                    <button type="submit" className="login-btn">
+                    <button
+                        type="button"
+                        className="login-btn"
+                        onClick={() => navigate("/dashboard")}
+                        >
                         Login
                     </button>
                 </form>
