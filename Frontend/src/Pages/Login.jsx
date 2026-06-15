@@ -1,7 +1,7 @@
 //import { Link } from "react-router-dom";
 import { Link, useNavigate } from "react-router-dom";
 import "./Login.css";
-import logo from "../../assets/EWlogo.png";
+import logo from "../assets/EWlogo.png";
 
 function Login() {
     const navigate = useNavigate();

@@ -18,8 +18,8 @@
 // export default App
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Login from "./pages/Login/Login";
-import Register from "./Pages/Register/Register";
+import Login from "./Pages/Login";
+import Register from "./Pages/Register";
 import ForgotPass from "./Pages/ForgotPass";
 import Profile from "./Pages/Profile";
 import Dashboard from "./Pages/Dashboard";
