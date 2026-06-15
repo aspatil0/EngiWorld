@@ -13,10 +13,10 @@ function SelectionPage() {
     ]
 
     return (
-        <div className="bg-card rounded-2xl shadow-sm border border-border p-10 md:p-14 max-w-4xl w-full h-100">
-            <div className="text-center mb-12">
-                <p className="text-sm font-medium text-primary uppercase tracking-wider mb-2">Select Your Category</p>
-                <h1 className="text-2xl md:text-3xl font-bold text-text-heading">Welcome Back, Utkarsh</h1>
+        <div className="bg-card rounded-2xl shadow-sm border border-border p-10 md:p-14 max-w-4xl w-full h-135 flex flex-col justify-center item-center">
+            <div className="text-center mb-19">
+                <p className="text-xl font-medium text-primary uppercase tracking-wider mb-2">Select Your Category</p>
+                <h1 className="text-3xl md:text-3xl font-bold text-text-heading">Welcome Back, Utkarsh</h1>
                 <p className="text-text-muted mt-2 text-sm">Choose where you are in your engineering journey</p>
             </div>
 

@@ -3,20 +3,20 @@ import "./Login.css";
 import logo from "../../assets/EWlogo.png";
 
 function Login() {
-  return (
-    <div className="login-container">
-        <div className="header">
-            <h1 className="header-title">EngiWorld</h1>
+    return (
+        <div className="login-container">
+            <div className="header">
+                <h1 className="header-title">EngiWorld</h1>
 
-            <img
-                src={logo}
-                alt="EngiWorld Logo"
-                className="logo"
-            />
-        </div>
+                <img
+                    src={logo}
+                    alt="EngiWorld Logo"
+                    className="logo"
+                />
+            </div>
 
-       
-        
+
+
             <div className="login-card">
                 <h2>Welcome Back 👋</h2>
                 <p>Login to continue your learning journey</p>
@@ -63,8 +63,8 @@ function Login() {
                 </p>
             </div>
         </div>
-    
-  );
+
+    );
 }
 
 export default Login;
