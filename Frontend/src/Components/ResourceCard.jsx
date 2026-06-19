@@ -48,19 +48,40 @@ function ResourceCard({
             className={`animate-fade-in-up group ${disabled ? "cursor-not-allowed opacity-60" : "cursor-pointer"}`}
             style={{ animationDelay: `${index * 120 + 400}ms` }}
         >
-            <div className="glass-card relative rounded-2xl p-6 flex flex-col items-center justify-center gap-3">
+            <div className="glass-card relative rounded-2xl flex flex-col items-center justify-between gap-4
+                            w-52 sm:w-56 md:w-64
+                            min-h-[250px] sm:min-h-[270px] md:min-h-[290px]
+                            p-5 sm:p-6
+                            transition-all duration-500 ease-out
+                            hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(255,107,107,0.2)]
+                            hover:border-primary/30
+                            active:scale-95">
                 <div
-                    className="rounded-full p-3"
+                    className="rounded-full p-3.5 transition-transform duration-500 group-hover:scale-110"
                     style={{ backgroundColor: style.bg, color: style.color }}
                 >
                     {style.icon}
                 </div>
 
-                <p>{type}</p>
-                <h3>{title}</h3>
+                <span className="text-[10px] font-bold uppercase tracking-widest text-text-muted">
+                    {type}
+                </span>
+                
+                <h3 className="text-sm sm:text-base font-bold text-text-heading text-center line-clamp-2 transition-colors duration-300 group-hover:text-primary">
+                    {title}
+                </h3>
 
-                {description && <p>{description}</p>}
-                {meta && <p>{meta}</p>}
+                {description && (
+                    <p className="text-xs text-text-body text-center line-clamp-2 leading-relaxed">
+                        {description}
+                    </p>
+                )}
+                
+                {meta && (
+                    <span className="text-[10px] sm:text-xs font-semibold text-primary/80 bg-primary/5 px-2.5 py-0.5 rounded-full mt-1">
+                        {meta}
+                    </span>
+                )}
             </div>
         </div>
     );

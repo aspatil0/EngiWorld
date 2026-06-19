@@ -15,19 +15,17 @@ function SubjectCard({
             style={{ animationDelay: `${index * 120 + 400}ms` }}
             onClick={onClick}
         >
-            <div className="glass-card relative rounded-2xl p-6 flex flex-col items-center justify-center gap-3
-                            w-40 h-48 p-2
-               sm:w-36 sm:h-44 sm:p-4 
-               md:w-44 md:h-52 md:p-6
-               
-               flex-shrink md:flex-shrink-0
-                           transition-all duration-500 ease-out
-                           hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(255,107,107,0.2)]
-                           hover:border-primary/30
-                           active:scale-95">
+            <div className="glass-card relative rounded-2xl flex flex-col items-center justify-between gap-4
+                            w-52 sm:w-56 md:w-64
+                            min-h-[250px] sm:min-h-[270px] md:min-h-[290px]
+                            p-5 sm:p-6
+                            transition-all duration-500 ease-out
+                            hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(255,107,107,0.2)]
+                            hover:border-primary/30
+                            active:scale-95">
 
-            
-                <h3 className="text-lg sm:text-xl font-bold text-text-heading
+
+                <h3 className="text-sm sm:text-lg font-bold text-text-heading
                              transition-colors duration-300 group-hover:text-primary">
                     {title}
                 </h3>
@@ -39,33 +37,30 @@ function SubjectCard({
                         {semester && `Sem ${semester}`}
                     </p>
                 )}
-                
+
                 {description && (
                     <p className="text-xs text-text-muted text-center leading-relaxed">
                         {description}
                     </p>
                 )}
-                <div className=''>
+                <div className="flex items-center justify-center gap-4 mt-3 border-t border-border/50 p-4 w-full">
                     {pyqCount > 0 && (
-                        <div>
-                            <span>{pyqCount}</span>
-                            <p>PYQs</p>
+                        <div className="flex flex-col items-center">
+                            <span className="text-sm font-bold text-primary">{pyqCount}</span>
+                            <span className="text-[10px] text-text-muted font-medium">PYQs</span>
                         </div>
-
                     )}
                     {resourcesCount > 0 && (
-                        <div>
-                            <span>{resourcesCount}</span>
-                            <p>Resources</p>
+                        <div className="flex flex-col items-center">
+                            <span className="text-sm font-bold text-primary">{resourcesCount}</span>
+                            <span className="text-[10px] text-text-muted font-medium">Notes</span>
                         </div>
-
                     )}
                     {unitsCount > 0 && (
-                        <div>
-                            <span>{unitsCount}</span>
-                            <p>Units</p>
+                        <div className="flex flex-col items-center">
+                            <span className="text-sm font-bold text-primary">{unitsCount}</span>
+                            <span className="text-[10px] text-text-muted font-medium">Units</span>
                         </div>
-
                     )}
                 </div>
 
